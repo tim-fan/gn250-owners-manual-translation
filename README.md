@@ -1,5 +1,5 @@
 # GN250 Owners Manual Translation
-Quick project to translate the Suzuki GN250 owner's manual from Spanish to Engligh.
+Quick project to translate the Suzuki GN250 owner's manual from Spanish to English.
 (because I could only find the manual online in Spanish)
 
 ![GN 250 000.jpg](GN_250_000.jpg)![GN 250 003.jpg](GN_250_003.jpg)
