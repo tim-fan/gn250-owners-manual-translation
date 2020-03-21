@@ -1,0 +1,10 @@
+ 
+
+LUZ DE INDICACION DE PUNTO MUERTO 0)
+La luz del indicador de punto muerto se encederá
+cuendo la transmisión está en punto muerto.
+
+LUZ DE INDICACION DE LUZ LARGA Y)
+Etindicador de luz larga se enciende cuando se co-|
+necte lo luz larga del faro.
+

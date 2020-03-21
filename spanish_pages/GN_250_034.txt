@@ -1,0 +1,77 @@
+_ GRAFICA DE MANTENIMIENTO PERIODICO
+Realice los trabajos de mantenimiento según las indicaciones del cuentakilómetros o los intervalos de
+impo, lo que acontezca primero.
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+intervelo [nas | 800 | 3000 | 8000 [9500
+im | 1000 | 5000 | 10000 | 15000
+hom Mes | 3 15 30 5
+Bateria = 1 1 1
+Tensor dela cadena de distribución 1 1 í í
+Tue de villas 7 1 1 7
+Baja = 1 a 1
+ro dee coa cad 12 000 on
+Carburador 1 7 1
+
+ 
+
+Tubo de combustible
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+Taza del colador de combustible e - E S
+Embrague 1 1 1 1
+X | ñceito del motor y fro de sosite ñ ñ ñ ñ
+1 1 1 1
+
+Getrasdaleremiión "mpie y lubrique cada 1000 km
+
+1
+
+Fonos TNT
+
+ 
+

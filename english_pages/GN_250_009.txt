@@ -1,0 +1,10 @@
+
+
+DEAD POINT INDICATION LIGHT 0)
+The light of the deadlock indicator will turn on
+when the transmission is deadlocked.
+
+LONG LIGHT INDICATION LIGHT AND)
+Long light indicator lights up when you co-
+the long light of the lighthouse.
+

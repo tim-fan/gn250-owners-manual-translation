@@ -1,0 +1,11 @@
+ 
+
+Operación de las señales de giro O)
+Posición “R” - para senales de giro ala derecha
+Posición "L” - para señales de giro ala izquierdo.
+
+ 
+
+INTERRUPTOR DE LA BOCINA (2)
+Presione este interruptor para que suene la bocina
+

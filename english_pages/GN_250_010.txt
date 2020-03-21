@@ -1,0 +1,11 @@
+
+
+_ Light intensity regulator operation (4)
+Position "HI" - for long ring light.
+Position "LO" for overtaking light
+
+"Operation of overtaking light E)
+'Pushing the operation switch of the lights
+further down the "LO" position will cause it to be
+hundredth the fro.
+
