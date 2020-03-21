@@ -2,7 +2,7 @@
 Quick project to translate the Suzuki GN250 owner's manual from Spanish to Engligh.
 (because I could only find the manual online in Spanish)
 
-![GN 250 000.jpg](GN250_Owners_Manual/GN 250 000.jpg)
+![GN 250 000.jpg](GN_250_000.jpg)![GN 250 003.jpg](GN_250_003.jpg)
 
 Steps:
  1) perform OCR to extract Spanish text from manual
