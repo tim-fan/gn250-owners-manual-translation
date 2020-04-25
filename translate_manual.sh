@@ -21,17 +21,16 @@ set -o errexit
 mkdir -p spanish_pages
 mkdir -p english_pages
 
-for IMAGE_PATH in GN250_Owners_Manual/*.jpg
-# for IMAGE_PATH in "GN250_Owners_Manual/GN 250 002.jpg"
-do
-    PAGE_NAME=$(basename "${IMAGE_PATH%.*}" | sed -e 's/ /_/g')
-    echo "Translating page: ${PAGE_NAME}"
-
+extract_text () {
+    PAGE_NAME=$1
     if [ ! -f spanish_pages/${PAGE_NAME}.txt ]
     then
-        tesseract "${IMAGE_PATH}" spanish_pages/${PAGE_NAME} -l spa
+        tesseract GN250_Owners_Manual_Original_Spanish/${PAGE_NAME}.jpg spanish_pages/${PAGE_NAME} -l spa
     fi
+}
 
+translate_page () {
+    PAGE_NAME=$1
     if [ ! -f english_pages/${PAGE_NAME}.txt ]
     then
         ~/.local/bin/trans -input spanish_pages/${PAGE_NAME}.txt -brief -show-alternatives n -output english_pages/${PAGE_NAME}.txt -e bing es:en
@@ -46,13 +45,44 @@ do
             exit 1
         fi
     fi
+}
 
+create_translated_pdf () {
+    PAGE_NAME=$1
     #create pdf files of translated text
     if [ ! -f english_pages/${PAGE_NAME}.pdf ]
     then
-        pandoc english_pages/${PAGE_NAME}.txt -o english_pages/${PAGE_NAME}.pdf
+        pandoc english_pages/${PAGE_NAME}.txt -o english_pages/${PAGE_NAME}.pdf -V fontsize=12pt
     fi
+}
 
+convert_spanish_jpg_to_pdf () {
+    PAGE_NAME=$1
+    convert GN250_Owners_Manual_Original_Spanish/${PAGE_NAME}.jpg spanish_pages/${PAGE_NAME}.pdf
+}
 
+concat_original_with_translation () {
+    PAGE_NAME=$1
+    pdfjam spanish_pages/${PAGE_NAME}.pdf english_pages/${PAGE_NAME}.pdf --nup 2x1 --landscape --outfile concatenated_pages/${PAGE_NAME}.pdf
+}
+
+for IMAGE_PATH in GN250_Owners_Manual_Original_Spanish/*.jpg
+do
+    PAGE_NAME=$(basename "${IMAGE_PATH%.*}")
+    echo "Translating page: ${PAGE_NAME}"
+    echo ${IMAGE_PATH}
+
+    extract_text ${PAGE_NAME}
+
+    translate_page ${PAGE_NAME}
+
+    create_translated_pdf ${PAGE_NAME}
+
+    convert_spanish_jpg_to_pdf ${PAGE_NAME}
+
+    concat_original_with_translation ${PAGE_NAME}
 
 done
+
+#final step, collate concatenated pages into the final output
+pdftk concatenated_pages/* cat output gn250_manual_with_translation.pdf

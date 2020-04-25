@@ -13,6 +13,14 @@ Note, translate-shell can randomly fail to produce output, if google API stops r
 In this case, this script will exit with an error message, but you can run it again a little later and it will
 pick up where it exited (intermediate files are saved)
 
+## Result
+The resulting manual with english translation is available [here](gn250_manual_with_translation.pdf)
+
+## Next Steps
+* Translation accuracy is limited - investigate OCR and translation steps for source of errors
+* Generalise - would be nice to have a general purpose tool for translating any document
+* Font size - increase font size on translation pages
+
 ## Dependencies:
 ```text
 tesseract-ocr
@@ -20,4 +28,5 @@ https://github.com/soimort/translate-shell (using 0.9.6.11-git:598b6c7 installed
 pandoc
 texlive-latex-base
 texlive-fonts-recommended
+texlive-extra-utils
 ```
